@@ -2,5 +2,5 @@
 main code idea refactored from https://gitlab.com/eugennc/cg/tree/master/homeworks/javascript
 # motivation
 gpc homeworks
-# howto
-to compile .ts $tsc --watch 
+# run
+tsc --watch 
