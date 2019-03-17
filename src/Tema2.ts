@@ -45,7 +45,6 @@ class Tema2 extends Homework {
         let coordinates = [];
         let colors = [];
         const a = 0.2;
-        let clr = 1;
         for (let t = -Math.PI / 2; t < -Math.PI / 6; t = t + 0.007) {
 
             if (t < -Math.PI / 2.45 || t > -Math.PI / 4) {
@@ -117,7 +116,7 @@ class Tema2 extends Homework {
 
         for (let t = - Math.PI / 4; t <= Math.PI / 4; t = t + 0.05) {
 
-            const r = a * Math.sqrt(2 * Math.cos(2 * t));
+            const r = - a * Math.sqrt(2 * Math.cos(2 * t));
 
             const x = r * Math.cos(t);
             const y = r * Math.sin(t);
@@ -131,7 +130,7 @@ class Tema2 extends Homework {
         colors = [];
         for (let t = - Math.PI / 4; t <= Math.PI / 4; t = t + 0.05) {
 
-            const r = -a * Math.sqrt(2 * Math.cos(2 * t));
+            const r = a * Math.sqrt(2 * Math.cos(2 * t));
 
             const x = r * Math.cos(t);
             const y = r * Math.sin(t);
@@ -147,7 +146,7 @@ class Tema2 extends Homework {
         let colors = [];
         const a = 0.02;
 
-        for (let t = 0; t <= 10; t = t + 0.05) {
+        for (let t = 0; t < 2.9; t = t + 0.05) {
 
             const r = a * Math.pow(Math.E, 1 + t);
 
