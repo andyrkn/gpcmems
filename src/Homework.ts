@@ -10,7 +10,6 @@ abstract class Homework {
         this.counter = 0;
         this.functions = [];
         document.addEventListener("keydown", (e) => {
-            console.log("x");
             if (e.key == "ArrowRight") {
                 if (this.counter == this.functions.length - 1) {
                     this.counter = 0;
@@ -33,6 +32,6 @@ abstract class Homework {
     }
 
     public start(): void {
-        this.functions[0](this.renderer);
+        this.functions[this.counter](this.renderer);
     }
 }

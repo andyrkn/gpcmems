@@ -1,4 +1,4 @@
-class Tema2 extends Homework {
+class ImplementedHomework extends Homework {
 
     constructor(renderer: WebGLRenderer) {
         super(renderer);

@@ -24,6 +24,7 @@ varying vec4 v_color;
 void main() {
   // Multiply the position by the matrix.
   gl_Position = u_matrix * a_position;
+  gl_PointSize = 5.0;
 
   // Pass the color to the fragment shader.
   v_color = a_color;
@@ -45,9 +46,10 @@ void main() {
 
 <script src="dist/WebGLUtils.js"></script>
 <script src="dist/WebGLRenderer.js"></script>
+<script src="dist/NrUtils.js"></script>
 <script src="dist/Homework.js"></script>
 <!--TemaX where x represents which homework-->
-<script src="dist/Tema2.js"></script>
+<script src="dist/ImplementedHomework.js"></script>
 <script src="dist/main.js"></script>
 
 </html>
