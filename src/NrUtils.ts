@@ -130,7 +130,7 @@ class FractalTree {
             this.draw(e[0], e[1], level + 1, margin / 2, callback, vec);
 
             //cadet
-            vec = vec.rotate(-120);
+            vec = vec.rotate(-130);
             const f = this.drawSlice(d[0], d[1], margin / 2, callback, [0.4, 0.6, 0.6], vec);
             this.draw(f[0], f[1], level + 1, margin / 2, callback, vec);
         }
@@ -154,21 +154,21 @@ class WeirdTriangle {
 
     public draw(cx: number, cy: number, level: number, linelenght: number, callback: Function, vec: Vector, sign: number): void {
         if (level < this.maxlevel) {
-            vec = vec.rotate(90 * sign);
+            vec = vec.rotate(60 * sign);
             this.draw(cx, cy, level + 1, linelenght, callback, vec, -sign);
             const a = this.drawSlice(cx, cy, linelenght, callback, [1, 0.5, 0], vec);
 
-            vec = vec.rotate(90 * -sign);
+            vec = vec.rotate(60 * -sign);
             this.draw(a[0], a[1], level + 1, linelenght, callback, vec, sign);
 
             const b = this.drawSlice(a[0], a[1], linelenght, callback, [1, 0, 0], vec);
             this.draw(b[0], b[1], level + 1, linelenght, callback, vec, sign);
 
-            vec = vec.rotate(-sign * 90);
+            vec = vec.rotate(-sign * 60);
             const c = this.drawSlice(b[0], b[1], linelenght, callback, [1, 0, 0], vec);
             this.draw(c[0], c[1], level + 1, linelenght, callback, vec, -sign);
 
-            vec = vec.rotate(sign * 90);
+            vec = vec.rotate(sign * 60);
         }
     }
 

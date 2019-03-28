@@ -16,7 +16,7 @@ class ImplementedHomework extends Homework {
             }
 
         })
-        this.addFunctions([this.img3, this.img2, this.img1]);
+        this.addFunctions([this.img1, this.img2, this.MandelBrot, this.img3]);
         //this.addFunctions([this.img1, this.MandelBrot, this.JuliaFatou]);
     }
 
@@ -120,6 +120,6 @@ class ImplementedHomework extends Homework {
     private img3(renderer: WebGLRenderer): void {
         renderer.clearAndRender(new Float32Array([]), new Float32Array([]), "POINTS");
         const trengle = new WeirdTriangle(ImplementedHomework.nivel);
-        trengle.draw(0, 0, 1, 0.3, (coord: Float32Array, cl: Float32Array) => { renderer.renderOver(coord, cl, "LINES"); }, new Vector(0, 1), 1);
+        trengle.draw(0, 0, 1, 0.1, (coord: Float32Array, cl: Float32Array) => { renderer.renderOver(coord, cl, "LINES"); }, new Vector(0, 1), 1);
     }
 }
